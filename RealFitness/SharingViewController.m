@@ -80,8 +80,17 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+
+  NSDictionary* users = @{@"userid": @"123", @"username": @"Andrey",
+                          @"calories": @"22", @"distance": @"0.43",
+                          @"duration": @"3:45", @"heartrate": @"70",
+                          @"heartrange": @"1", @"workoutgoal": @"2"};
+
+  self.messageHandler(users, nil);
+
     __weak SharingViewController *weakSelf = self;
-    dispatch_async(_messageQueue, ^{
+
+  /*dispatch_async(_messageQueue, ^{
         NSDictionary *body = [[NSDictionary alloc] initWithObjectsAndKeys: @"select * from `Fitness`", @"filter", ChannelName, @"subscription_id", [NSNumber numberWithInt:1], @"period", nil];
         rtm_status stat = [weakSelf.connMgr subscribeWithBody:body withMessageHandler:weakSelf.messageHandler];
         if (stat != RTM_OK) {
@@ -91,7 +100,7 @@
         while ([weakSelf.connMgr.rtm poll] >= 0) {
             sleep(1);
         }
-    });
+    });*/
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
