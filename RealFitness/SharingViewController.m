@@ -28,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.tableView.tableFooterView = [UIView new];
     self.connMgr = [SatoriConnectionManager sharedManager];
     _messageQueue = dispatch_queue_create("usersubscriptionqueue", DISPATCH_QUEUE_CONCURRENT);
     self.users = [NSMutableArray<User *> new];
@@ -82,10 +83,16 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-  NSDictionary* users = @{@"userid": @"123", @"username": @"Andrey",
-                          @"calories": @"22", @"distance": @"0.43",
-                          @"duration": @"3:45", @"heartrate": @"70",
-                          @"heartrange": @"1", @"workoutgoal": @"2"};
+  NSDictionary* user = @{@"userid": @"7A3E2903-A4AF-4443-AB67-B591C670105D",
+                          @"username": @"Andrey",
+                          @"calories": @"0.1",
+                          @"distance": @"0.43",
+                          @"duration": @"0:00:14",
+                          @"heartrate": @"59",
+                          @"heartrange": @"90-104",
+                          @"workoutgoal": @"Recreational"};
+
+  NSDictionary* users = @{@"messages": @[user]};
 
   self.messageHandler(users, nil);
 
