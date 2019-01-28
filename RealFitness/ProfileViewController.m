@@ -7,6 +7,7 @@
 #import "ProfileViewController.h"
 #import <HealthKit/HealthKit.h>
 #import "RealFitness-Swift.h"
+#import "UIImageView+Letters.h"
 
 @interface ProfileViewController ()
 @property (nonatomic, strong) HKHealthStore *healthStore;
@@ -59,7 +60,7 @@
         }
         else {
             self.avatarImageView.alpha = 1.0;
-            [self.avatarImageView setImageForNameWithString:textField.text backgroundColor:nil circular:NO textAttributes:nil];
+            [self.avatarImageView setImageWithString:textField.text];
         }
     }
     if (self.activeTextField == textField) {

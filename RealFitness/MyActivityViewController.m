@@ -10,6 +10,7 @@
 #import "SatoriConnectionManager.h"
 #import <FLAnimatedImage/FLAnimatedImage.h>
 #import "RealFitness-Swift.h"
+@import FNReactionsView;
 
 @interface MyActivityViewController () {
     dispatch_queue_t _messageQueue;
@@ -143,6 +144,7 @@
         UInt32 x = (UInt32)reactions.count;
         int a = arc4random_uniform(x);
         UIImage *img = [reactions objectAtIndex:a];
+
         [self.reactionsView showReactionWithImage:img];
     }
 }

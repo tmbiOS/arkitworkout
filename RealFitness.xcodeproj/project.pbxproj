@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		598D1C8A218C593A59F7A8E6 /* libPods-RealFitness WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F20D74645D06EBD132BCBAF /* libPods-RealFitness WatchKit Extension.a */; };
-		AEFC303E5C9C4717582736B6 /* libPods-RealFitness WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B976AA3BF8A4CB34EE16C7 /* libPods-RealFitness WatchKit App.a */; };
+		E3622E2B21FF98E10045120E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E2A21FF98E10045120E /* Test.swift */; };
 		EDA90570733C0BAB019CBE4F /* Pods_RealFitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3652FC4311B148E6E9DE289 /* Pods_RealFitness.framework */; };
 		EF0187231E80BD8A006A496E /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0187221E80BD8A006A496E /* WatchConnectivity.framework */; };
 		EF1C2C7F1EA5622300CD6D27 /* TimerInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1C2C7E1EA5622300CD6D27 /* TimerInterfaceController.m */; };
@@ -21,7 +20,6 @@
 		EF1C2C901EA58DB400CD6D27 /* countdown5.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1C2C8E1EA58DB400CD6D27 /* countdown5.png */; };
 		EF1C2C911EA58DB400CD6D27 /* countdown6.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1C2C8F1EA58DB400CD6D27 /* countdown6.png */; };
 		EF1C2C941EA6FCED00CD6D27 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1C2C931EA6FCED00CD6D27 /* ProfileViewController.m */; };
-		EF1C2C971EA8234100CD6D27 /* InitialsImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1C2C961EA8234100CD6D27 /* InitialsImageView.swift */; };
 		EF1C2C9A1EA83C1400CD6D27 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1C2C991EA83C1400CD6D27 /* UserTableViewCell.m */; };
 		EF1C2CA51EA941BB00CD6D27 /* calories.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1C2CA21EA941BB00CD6D27 /* calories.png */; };
 		EF1C2CA61EA941BB00CD6D27 /* distance.png in Resources */ = {isa = PBXBuildFile; fileRef = EF1C2CA31EA941BB00CD6D27 /* distance.png */; };
@@ -968,7 +966,6 @@
 		EF7FD1131E7CA612003A5A4A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF7FD1121E7CA612003A5A4A /* HealthKit.framework */; };
 		EFD6B9F51EFDC30200C2E0D6 /* SatoriRtmSdkWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD6B9F41EFDC30200C2E0D6 /* SatoriRtmSdkWrapper.framework */; };
 		EFD6B9F61EFDC30200C2E0D6 /* SatoriRtmSdkWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFD6B9F41EFDC30200C2E0D6 /* SatoriRtmSdkWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EFEF51991EB945A000E2058C /* FNReactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF51981EB945A000E2058C /* FNReactionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1025,13 +1022,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		13E3DBAB16DD4FCEE66B960B /* Pods-RealFitness WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealFitness WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-RealFitness WatchKit App/Pods-RealFitness WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
-		23B976AA3BF8A4CB34EE16C7 /* libPods-RealFitness WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RealFitness WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BE99E099A19A6FA82B26976 /* Pods-RealFitness WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealFitness WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-RealFitness WatchKit Extension/Pods-RealFitness WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
-		58DE0BBB190A01B32ADD43C1 /* Pods-RealFitness WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealFitness WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-RealFitness WatchKit Extension/Pods-RealFitness WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		0CAEF345F78E7D677615C781 /* Pods_RealFitness_RealFitness_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealFitness_RealFitness_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B7263DED78D0261A3E048F1 /* Pods-RealFitness-RealFitness WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealFitness-RealFitness WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-RealFitness-RealFitness WatchKit Extension/Pods-RealFitness-RealFitness WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		5B8180328D1AE839B9491113 /* libPods-RealFitness WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RealFitness WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6040FF006CB002C4F9FCF63D /* Pods-RealFitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealFitness.release.xcconfig"; path = "Target Support Files/Pods-RealFitness/Pods-RealFitness.release.xcconfig"; sourceTree = "<group>"; };
-		9F20D74645D06EBD132BCBAF /* libPods-RealFitness WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RealFitness WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6766FEF3028DEEF09C2E55A2 /* Pods-RealFitness-RealFitness WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealFitness-RealFitness WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-RealFitness-RealFitness WatchKit App/Pods-RealFitness-RealFitness WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		74EA48AAC5BCF95AB8970A07 /* Pods_RealFitness_RealFitness_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealFitness_RealFitness_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8144401C54B9CCE7B92C7C14 /* libPods-RealFitness WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RealFitness WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB172A25FD195EE9395D768 /* Pods-RealFitness-RealFitness WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealFitness-RealFitness WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-RealFitness-RealFitness WatchKit App/Pods-RealFitness-RealFitness WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		A3652FC4311B148E6E9DE289 /* Pods_RealFitness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealFitness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8E5B083EBF0E9FC210A2A7 /* Pods-RealFitness-RealFitness WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealFitness-RealFitness WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-RealFitness-RealFitness WatchKit Extension/Pods-RealFitness-RealFitness WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		E3622E2A21FF98E10045120E /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		EF0187221E80BD8A006A496E /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		EF1C2C7D1EA5622300CD6D27 /* TimerInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerInterfaceController.h; sourceTree = "<group>"; };
 		EF1C2C7E1EA5622300CD6D27 /* TimerInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerInterfaceController.m; sourceTree = "<group>"; };
@@ -1047,7 +1048,6 @@
 		EF1C2C921EA6FCED00CD6D27 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		EF1C2C931EA6FCED00CD6D27 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		EF1C2C951EA8234000CD6D27 /* RealFitness-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RealFitness-Bridging-Header.h"; sourceTree = "<group>"; };
-		EF1C2C961EA8234100CD6D27 /* InitialsImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialsImageView.swift; sourceTree = "<group>"; };
 		EF1C2C981EA83C1400CD6D27 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
 		EF1C2C991EA83C1400CD6D27 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
 		EF1C2CA21EA941BB00CD6D27 /* calories.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calories.png; path = stats/calories.png; sourceTree = "<group>"; };
@@ -2013,9 +2013,7 @@
 		EF7FD1141E7CAECD003A5A4A /* RealFitness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealFitness.entitlements; sourceTree = "<group>"; };
 		EF83875A1F03283C001E5758 /* LGPlusButtonsViewFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LGPlusButtonsViewFramework.framework; path = Carthage/Build/iOS/LGPlusButtonsViewFramework.framework; sourceTree = "<group>"; };
 		EFD6B9F41EFDC30200C2E0D6 /* SatoriRtmSdkWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SatoriRtmSdkWrapper.framework; sourceTree = "<group>"; };
-		EFEF51981EB945A000E2058C /* FNReactionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNReactionsView.swift; sourceTree = "<group>"; };
 		FD3A9ED58BB6E4543E6F58B5 /* Pods-RealFitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealFitness.debug.xcconfig"; path = "Target Support Files/Pods-RealFitness/Pods-RealFitness.debug.xcconfig"; sourceTree = "<group>"; };
-		FF3D3FF64B259722D89B6DA4 /* Pods-RealFitness WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealFitness WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-RealFitness WatchKit App/Pods-RealFitness WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2023,7 +2021,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEFC303E5C9C4717582736B6 /* libPods-RealFitness WatchKit App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2043,7 +2040,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF2D51D71E81ACFE00503F17 /* WatchConnectivity.framework in Frameworks */,
-				598D1C8A218C593A59F7A8E6 /* libPods-RealFitness WatchKit Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2055,10 +2051,10 @@
 			children = (
 				FD3A9ED58BB6E4543E6F58B5 /* Pods-RealFitness.debug.xcconfig */,
 				6040FF006CB002C4F9FCF63D /* Pods-RealFitness.release.xcconfig */,
-				FF3D3FF64B259722D89B6DA4 /* Pods-RealFitness WatchKit App.debug.xcconfig */,
-				13E3DBAB16DD4FCEE66B960B /* Pods-RealFitness WatchKit App.release.xcconfig */,
-				58DE0BBB190A01B32ADD43C1 /* Pods-RealFitness WatchKit Extension.debug.xcconfig */,
-				2BE99E099A19A6FA82B26976 /* Pods-RealFitness WatchKit Extension.release.xcconfig */,
+				6766FEF3028DEEF09C2E55A2 /* Pods-RealFitness-RealFitness WatchKit App.debug.xcconfig */,
+				9EB172A25FD195EE9395D768 /* Pods-RealFitness-RealFitness WatchKit App.release.xcconfig */,
+				BB8E5B083EBF0E9FC210A2A7 /* Pods-RealFitness-RealFitness WatchKit Extension.debug.xcconfig */,
+				1B7263DED78D0261A3E048F1 /* Pods-RealFitness-RealFitness WatchKit Extension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -2069,6 +2065,14 @@
 				EF7FD1121E7CA612003A5A4A /* HealthKit.framework */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		E35CA18021FF8EFB00D56311 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				E3622E2A21FF98E10045120E /* Test.swift */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 		EF1C2C801EA56E5200CD6D27 /* countdown */ = {
@@ -3094,6 +3098,7 @@
 		EF7FD0CD1E7C7340003A5A4A /* RealFitness */ = {
 			isa = PBXGroup;
 			children = (
+				E35CA18021FF8EFB00D56311 /* Libraries */,
 				EF7FD1141E7CAECD003A5A4A /* RealFitness.entitlements */,
 				EF7FD0D11E7C7340003A5A4A /* AppDelegate.h */,
 				EF7FD0D21E7C7340003A5A4A /* AppDelegate.m */,
@@ -3116,7 +3121,6 @@
 				EF4219301E8C58BE00B17356 /* SatoriConnectionManager.h */,
 				EF4219311E8C58BE00B17356 /* SatoriConnectionManager.m */,
 				EF1C2C951EA8234000CD6D27 /* RealFitness-Bridging-Header.h */,
-				EFA6A20C1F01EC88006BBF42 /* Libraries */,
 				EF7FD0CE1E7C7340003A5A4A /* Supporting Files */,
 				EF7B3F921EB29ACA002E8B23 /* gif */,
 				EF4219361E8C97AE00B17356 /* Model */,
@@ -3177,35 +3181,12 @@
 				EF7B3F8F1EB29AAF002E8B23 /* FLAnimatedImage.framework */,
 				EF0187221E80BD8A006A496E /* WatchConnectivity.framework */,
 				A3652FC4311B148E6E9DE289 /* Pods_RealFitness.framework */,
-				23B976AA3BF8A4CB34EE16C7 /* libPods-RealFitness WatchKit App.a */,
-				9F20D74645D06EBD132BCBAF /* libPods-RealFitness WatchKit Extension.a */,
+				0CAEF345F78E7D677615C781 /* Pods_RealFitness_RealFitness_WatchKit_App.framework */,
+				74EA48AAC5BCF95AB8970A07 /* Pods_RealFitness_RealFitness_WatchKit_Extension.framework */,
+				5B8180328D1AE839B9491113 /* libPods-RealFitness WatchKit App.a */,
+				8144401C54B9CCE7B92C7C14 /* libPods-RealFitness WatchKit Extension.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EFA6A20C1F01EC88006BBF42 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				EFA6A20E1F01ECB2006BBF42 /* FNReactionsView */,
-				EFA6A20D1F01ECA2006BBF42 /* InitialsImageView */,
-			);
-			name = Libraries;
-			sourceTree = "<group>";
-		};
-		EFA6A20D1F01ECA2006BBF42 /* InitialsImageView */ = {
-			isa = PBXGroup;
-			children = (
-				EF1C2C961EA8234100CD6D27 /* InitialsImageView.swift */,
-			);
-			name = InitialsImageView;
-			sourceTree = "<group>";
-		};
-		EFA6A20E1F01ECB2006BBF42 /* FNReactionsView */ = {
-			isa = PBXGroup;
-			children = (
-				EFEF51981EB945A000E2058C /* FNReactionsView.swift */,
-			);
-			name = FNReactionsView;
 			sourceTree = "<group>";
 		};
 		EFA6A20F1F01ED54006BBF42 /* Assets */ = {
@@ -3236,7 +3217,7 @@
 				EF7FD0C91E7C7340003A5A4A /* Resources */,
 				EF7FD10D1E7C7341003A5A4A /* Embed Watch Content */,
 				EF459ECC1E82EBC7006DAD0C /* Embed Frameworks */,
-				764DC28049799C48495DF19E /* [CP] Embed Pods Frameworks */,
+				1D2B0E92B77081940BC02EE4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3252,7 +3233,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF7FD10A1E7C7341003A5A4A /* Build configuration list for PBXNativeTarget "RealFitness WatchKit App" */;
 			buildPhases = (
-				CAC163F69587441A1C761D97 /* [CP] Check Pods Manifest.lock */,
 				EF7FD0E01E7C7340003A5A4A /* Resources */,
 				EF7FD1091E7C7341003A5A4A /* Embed App Extensions */,
 				3B76F357CCE40F3142DCFDDD /* Frameworks */,
@@ -3271,7 +3251,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF7FD1061E7C7341003A5A4A /* Build configuration list for PBXNativeTarget "RealFitness WatchKit Extension" */;
 			buildPhases = (
-				BAD6226C802AE7E08AE3F494 /* [CP] Check Pods Manifest.lock */,
 				EF7FD0ED1E7C7341003A5A4A /* Sources */,
 				EF7FD0EE1E7C7341003A5A4A /* Frameworks */,
 				EF7FD0EF1E7C7341003A5A4A /* Resources */,
@@ -4323,7 +4302,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		764DC28049799C48495DF19E /* [CP] Embed Pods Frameworks */ = {
+		1D2B0E92B77081940BC02EE4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -4333,62 +4312,42 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RealFitness/Pods-RealFitness-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/FNReactionsView/FNReactionsView.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonRestKit/RestKit.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonVisualRecognitionV3/VisualRecognition.framework",
 				"${BUILT_PRODUCTS_DIR}/LGPlusButtonsView/LGPlusButtonsView.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UIImageView-Letters/UIImageView_Letters.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FNReactionsView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RestKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisualRecognition.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGPlusButtonsView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageView_Letters.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RealFitness/Pods-RealFitness-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BAD6226C802AE7E08AE3F494 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RealFitness WatchKit Extension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CAC163F69587441A1C761D97 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RealFitness WatchKit App-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -4403,12 +4362,11 @@
 				EF4219391E8C97D200B17356 /* User.m in Sources */,
 				EF1C2C9A1EA83C1400CD6D27 /* UserTableViewCell.m in Sources */,
 				EF4219321E8C58BE00B17356 /* SatoriConnectionManager.m in Sources */,
+				E3622E2B21FF98E10045120E /* Test.swift in Sources */,
 				EF1C2C941EA6FCED00CD6D27 /* ProfileViewController.m in Sources */,
 				EF7B3F9C1EB80D09002E8B23 /* UserActivityViewController.m in Sources */,
 				EF7FD0D31E7C7340003A5A4A /* AppDelegate.m in Sources */,
 				EF4219351E8C8B6100B17356 /* SharingViewController.m in Sources */,
-				EFEF51991EB945A000E2058C /* FNReactionsView.swift in Sources */,
-				EF1C2C971EA8234100CD6D27 /* InitialsImageView.swift in Sources */,
 				EF7FD0D01E7C7340003A5A4A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4496,6 +4454,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -4544,6 +4503,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -4564,7 +4524,6 @@
 		};
 		EF7FD1071E7C7341003A5A4A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58DE0BBB190A01B32ADD43C1 /* Pods-RealFitness WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "RealFitness WatchKit Extension/RealFitness WatchKit Extension.entitlements";
@@ -4582,7 +4541,6 @@
 		};
 		EF7FD1081E7C7341003A5A4A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BE99E099A19A6FA82B26976 /* Pods-RealFitness WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "RealFitness WatchKit Extension/RealFitness WatchKit Extension.entitlements";
@@ -4600,7 +4558,6 @@
 		};
 		EF7FD10B1E7C7341003A5A4A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF3D3FF64B259722D89B6DA4 /* Pods-RealFitness WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -4617,7 +4574,6 @@
 		};
 		EF7FD10C1E7C7341003A5A4A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13E3DBAB16DD4FCEE66B960B /* Pods-RealFitness WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -4648,11 +4604,12 @@
 				INFOPLIST_FILE = RealFitness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = satori.platform.RealFitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RealFitness/RealFitness-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -4673,10 +4630,11 @@
 				INFOPLIST_FILE = RealFitness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = satori.platform.RealFitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RealFitness/RealFitness-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

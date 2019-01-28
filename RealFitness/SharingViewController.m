@@ -11,6 +11,7 @@
 #import "RealFitness-Swift.h"
 #import "UserTableViewCell.h"
 #import "UserActivityViewController.h"
+#import "UIImageView+Letters.h"
 
 @interface SharingViewController () {
     dispatch_queue_t _messageQueue;
@@ -122,7 +123,7 @@
         [cell.avatarImageView setImage:[self.userAvatar objectForKey:user.userid]];
     }
     else {
-        [cell.avatarImageView setImageForNameWithString:user.username backgroundColor:nil circular:YES textAttributes:nil];
+       [cell.avatarImageView setImageWithString:user.username];
         [self.userAvatar setObject:cell.avatarImageView.image forKey:user.userid];
     }
     cell.user = user;
