@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="4352" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -375,7 +375,7 @@
             </objects>
             <point key="canvasLocation" x="953" y="1188"/>
         </scene>
-        <!--Social-->
+        <!--Users-->
         <scene sceneID="QJU-Im-Xeg">
             <objects>
                 <tableViewController id="uPI-Is-kSS" customClass="SharingViewController" sceneMemberID="viewController">
@@ -453,7 +453,13 @@
                             <outlet property="delegate" destination="uPI-Is-kSS" id="1g3-Ce-saJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Social" id="kla-JI-KO9"/>
+                    <navigationItem key="navigationItem" title="Users" id="kla-JI-KO9">
+                        <barButtonItem key="rightBarButtonItem" image="AR-icon" id="0AO-Qe-hbJ">
+                            <connections>
+                                <segue destination="hoy-go-nIn" kind="show" id="DYh-Bj-E1a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ZZ-p3-HlU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -485,11 +491,11 @@
             </objects>
             <point key="canvasLocation" x="954" y="-342"/>
         </scene>
-        <!--Social-->
+        <!--Users-->
         <scene sceneID="dl2-ef-NhV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B2t-QG-5l1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Social" image="Social" selectedImage="SocialSelected" id="d89-uT-arz"/>
+                    <tabBarItem key="tabBarItem" title="Users" image="Social" selectedImage="SocialSelected" id="d89-uT-arz"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="5iZ-lk-u7z">
@@ -699,10 +705,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcF-yK-IGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2613.5999999999999" y="354.87256371814095"/>
+            <point key="canvasLocation" x="2614" y="355"/>
+        </scene>
+        <!--Face Detection-->
+        <scene sceneID="tml-eK-kle">
+            <objects>
+                <viewController storyboardIdentifier="ARKitViewController" title="Face Detection" id="hoy-go-nIn" customClass="ARKitViewController" customModule="RealFitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="jEH-FQ-o8A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </arscnView>
+                    <connections>
+                        <outlet property="sceneView" destination="jEH-FQ-o8A" id="oNX-Jw-NXF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D1T-H1-HRb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2614" y="-342"/>
         </scene>
     </scenes>
     <resources>
+        <image name="AR-icon" width="32" height="35"/>
         <image name="CaloriesBurned" width="42" height="68"/>
         <image name="Distance" width="48" height="68"/>
         <image name="Inactive_heart0" width="50" height="50"/>

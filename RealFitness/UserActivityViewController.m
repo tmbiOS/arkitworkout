@@ -122,15 +122,15 @@
     [self.navigationItem setTitle:self.userName];
     [self setLabelColors:[UIColor whiteColor]];
     
-    UIButton *button =  [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:[UIImage imageNamed:@"Bubble"] forState:UIControlStateNormal];
+    /*UIButton *button =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:@"AR_Kit-180"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(showHideButtonsAction) forControlEvents:UIControlEventTouchUpInside];
     [button setFrame:CGRectMake(0, 0, 50, 50)];
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 10.0, 0, 0);
     [button setImageEdgeInsets:insets];
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = barButton;
-    [self setupReactionsButton];
+    [self setupReactionsButton];*/
     
     UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [activityIndicator startAnimating];
@@ -188,10 +188,10 @@
 
 - (void)showHideButtonsAction
 {
-    if (_plusButtonsViewNavBar.isShowing)
-        [_plusButtonsViewNavBar hideAnimated:YES completionHandler:nil];
-    else
-        [_plusButtonsViewNavBar showAnimated:YES completionHandler:nil];
+    //Show segue to Arkit
+  UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+  ARKitViewController *arKitViewController = [storyboard instantiateViewControllerWithIdentifier:@"ARKitViewController"];
+  [self.navigationController pushViewController:arKitViewController animated:YES];
 }
 
 - (NSString*)getReactionForIndex:(int)index {

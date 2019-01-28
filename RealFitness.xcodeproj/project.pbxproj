@@ -7,7 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E3622E2B21FF98E10045120E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E2A21FF98E10045120E /* Test.swift */; };
+		E3622E3021FFA9A60045120E /* SanjeevGhimire_967590069.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E3622E2C21FFA9A40045120E /* SanjeevGhimire_967590069.mlmodel */; };
+		E3622E3121FFA9A60045120E /* SteveMartinelli_2096165720.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E3622E2D21FFA9A40045120E /* SteveMartinelli_2096165720.mlmodel */; };
+		E3622E3221FFA9A60045120E /* DefaultCustomModel_1161153938.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E3622E2E21FFA9A50045120E /* DefaultCustomModel_1161153938.mlmodel */; };
+		E3622E3321FFA9A60045120E /* ScottDAngelo_1040670748.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E3622E2F21FFA9A60045120E /* ScottDAngelo_1040670748.mlmodel */; };
+		E3622E3D21FFAA250045120E /* calories.png in Resources */ = {isa = PBXBuildFile; fileRef = E3622E3521FFAA240045120E /* calories.png */; };
+		E3622E3E21FFAA250045120E /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = E3622E3621FFAA240045120E /* twitter.png */; };
+		E3622E3F21FFAA250045120E /* linkedin.png in Resources */ = {isa = PBXBuildFile; fileRef = E3622E3721FFAA240045120E /* linkedin.png */; };
+		E3622E4021FFAA250045120E /* steps.png in Resources */ = {isa = PBXBuildFile; fileRef = E3622E3821FFAA240045120E /* steps.png */; };
+		E3622E4121FFAA250045120E /* distance.png in Resources */ = {isa = PBXBuildFile; fileRef = E3622E3921FFAA240045120E /* distance.png */; };
+		E3622E4221FFAA250045120E /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = E3622E3A21FFAA240045120E /* heart.png */; };
+		E3622E4321FFAA250045120E /* BMSCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3622E3B21FFAA240045120E /* BMSCredentials.plist */; };
+		E3622E4421FFAA250045120E /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = E3622E3C21FFAA250045120E /* facebook.png */; };
+		E3622E4621FFAA3E0045120E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = E3622E4521FFAA3E0045120E /* art.scnassets */; };
+		E3622E4821FFAA480045120E /* ARKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E4721FFAA480045120E /* ARKitViewController.swift */; };
+		E3622E4F21FFAABC0045120E /* CloudantRESTCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E4921FFAABB0045120E /* CloudantRESTCall.swift */; };
+		E3622E5021FFAABC0045120E /* SCNNode+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E4A21FFAABB0045120E /* SCNNode+Text.swift */; };
+		E3622E5121FFAABC0045120E /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E4B21FFAABC0045120E /* Face.swift */; };
+		E3622E5221FFAABC0045120E /* SCNVector3+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E4C21FFAABC0045120E /* SCNVector3+Distance.swift */; };
+		E3622E5321FFAABC0045120E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E4D21FFAABC0045120E /* Constant.swift */; };
+		E3622E5421FFAABC0045120E /* CIImage+FaceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E4E21FFAABC0045120E /* CIImage+FaceDetection.swift */; };
+		E3622E5621FFAD8C0045120E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3622E5521FFAD8C0045120E /* HealthKit.framework */; };
 		EDA90570733C0BAB019CBE4F /* Pods_RealFitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3652FC4311B148E6E9DE289 /* Pods_RealFitness.framework */; };
 		EF0187231E80BD8A006A496E /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0187221E80BD8A006A496E /* WatchConnectivity.framework */; };
 		EF1C2C7F1EA5622300CD6D27 /* TimerInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1C2C7E1EA5622300CD6D27 /* TimerInterfaceController.m */; };
@@ -1032,7 +1052,27 @@
 		9EB172A25FD195EE9395D768 /* Pods-RealFitness-RealFitness WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealFitness-RealFitness WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-RealFitness-RealFitness WatchKit App/Pods-RealFitness-RealFitness WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		A3652FC4311B148E6E9DE289 /* Pods_RealFitness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealFitness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8E5B083EBF0E9FC210A2A7 /* Pods-RealFitness-RealFitness WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealFitness-RealFitness WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-RealFitness-RealFitness WatchKit Extension/Pods-RealFitness-RealFitness WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		E3622E2A21FF98E10045120E /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		E3622E2C21FFA9A40045120E /* SanjeevGhimire_967590069.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SanjeevGhimire_967590069.mlmodel; sourceTree = "<group>"; };
+		E3622E2D21FFA9A40045120E /* SteveMartinelli_2096165720.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SteveMartinelli_2096165720.mlmodel; sourceTree = "<group>"; };
+		E3622E2E21FFA9A50045120E /* DefaultCustomModel_1161153938.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DefaultCustomModel_1161153938.mlmodel; sourceTree = "<group>"; };
+		E3622E2F21FFA9A60045120E /* ScottDAngelo_1040670748.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ScottDAngelo_1040670748.mlmodel; sourceTree = "<group>"; };
+		E3622E3521FFAA240045120E /* calories.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calories.png; sourceTree = "<group>"; };
+		E3622E3621FFAA240045120E /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		E3622E3721FFAA240045120E /* linkedin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedin.png; sourceTree = "<group>"; };
+		E3622E3821FFAA240045120E /* steps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steps.png; sourceTree = "<group>"; };
+		E3622E3921FFAA240045120E /* distance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = distance.png; sourceTree = "<group>"; };
+		E3622E3A21FFAA240045120E /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		E3622E3B21FFAA240045120E /* BMSCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BMSCredentials.plist; sourceTree = "<group>"; };
+		E3622E3C21FFAA250045120E /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		E3622E4521FFAA3E0045120E /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		E3622E4721FFAA480045120E /* ARKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARKitViewController.swift; sourceTree = "<group>"; };
+		E3622E4921FFAABB0045120E /* CloudantRESTCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudantRESTCall.swift; sourceTree = "<group>"; };
+		E3622E4A21FFAABB0045120E /* SCNNode+Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Text.swift"; sourceTree = "<group>"; };
+		E3622E4B21FFAABC0045120E /* Face.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		E3622E4C21FFAABC0045120E /* SCNVector3+Distance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Distance.swift"; sourceTree = "<group>"; };
+		E3622E4D21FFAABC0045120E /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E3622E4E21FFAABC0045120E /* CIImage+FaceDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIImage+FaceDetection.swift"; sourceTree = "<group>"; };
+		E3622E5521FFAD8C0045120E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		EF0187221E80BD8A006A496E /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		EF1C2C7D1EA5622300CD6D27 /* TimerInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerInterfaceController.h; sourceTree = "<group>"; };
 		EF1C2C7E1EA5622300CD6D27 /* TimerInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerInterfaceController.m; sourceTree = "<group>"; };
@@ -2040,6 +2080,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF2D51D71E81ACFE00503F17 /* WatchConnectivity.framework in Frameworks */,
+				E3622E5621FFAD8C0045120E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2067,12 +2108,38 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		E35CA18021FF8EFB00D56311 /* Libraries */ = {
+		E35CA18021FF8EFB00D56311 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				E3622E2A21FF98E10045120E /* Test.swift */,
+				E3622E4E21FFAABC0045120E /* CIImage+FaceDetection.swift */,
+				E3622E4921FFAABB0045120E /* CloudantRESTCall.swift */,
+				E3622E4D21FFAABC0045120E /* Constant.swift */,
+				E3622E4B21FFAABC0045120E /* Face.swift */,
+				E3622E4A21FFAABB0045120E /* SCNNode+Text.swift */,
+				E3622E4C21FFAABC0045120E /* SCNVector3+Distance.swift */,
+				E3622E4721FFAA480045120E /* ARKitViewController.swift */,
 			);
-			name = Libraries;
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		E3622E3421FFA9FA0045120E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E3622E4521FFAA3E0045120E /* art.scnassets */,
+				E3622E3B21FFAA240045120E /* BMSCredentials.plist */,
+				E3622E3521FFAA240045120E /* calories.png */,
+				E3622E3921FFAA240045120E /* distance.png */,
+				E3622E3C21FFAA250045120E /* facebook.png */,
+				E3622E3A21FFAA240045120E /* heart.png */,
+				E3622E3721FFAA240045120E /* linkedin.png */,
+				E3622E3821FFAA240045120E /* steps.png */,
+				E3622E3621FFAA240045120E /* twitter.png */,
+				E3622E2E21FFA9A50045120E /* DefaultCustomModel_1161153938.mlmodel */,
+				E3622E2C21FFA9A40045120E /* SanjeevGhimire_967590069.mlmodel */,
+				E3622E2F21FFA9A60045120E /* ScottDAngelo_1040670748.mlmodel */,
+				E3622E2D21FFA9A40045120E /* SteveMartinelli_2096165720.mlmodel */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		EF1C2C801EA56E5200CD6D27 /* countdown */ = {
@@ -3098,7 +3165,8 @@
 		EF7FD0CD1E7C7340003A5A4A /* RealFitness */ = {
 			isa = PBXGroup;
 			children = (
-				E35CA18021FF8EFB00D56311 /* Libraries */,
+				E3622E3421FFA9FA0045120E /* Resources */,
+				E35CA18021FF8EFB00D56311 /* Swift */,
 				EF7FD1141E7CAECD003A5A4A /* RealFitness.entitlements */,
 				EF7FD0D11E7C7340003A5A4A /* AppDelegate.h */,
 				EF7FD0D21E7C7340003A5A4A /* AppDelegate.m */,
@@ -3176,6 +3244,7 @@
 		EF7FD1111E7CA612003A5A4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3622E5521FFAD8C0045120E /* HealthKit.framework */,
 				EF83875A1F03283C001E5758 /* LGPlusButtonsViewFramework.framework */,
 				EFD6B9F41EFDC30200C2E0D6 /* SatoriRtmSdkWrapper.framework */,
 				EF7B3F8F1EB29AAF002E8B23 /* FLAnimatedImage.framework */,
@@ -3275,6 +3344,7 @@
 				TargetAttributes = {
 					EF7FD0CA1E7C7340003A5A4A = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 93HEPAR872;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -3288,10 +3358,12 @@
 					};
 					EF7FD0E11E7C7340003A5A4A = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 93HEPAR872;
 						ProvisioningStyle = Automatic;
 					};
 					EF7FD0F01E7C7341003A5A4A = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 93HEPAR872;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes.watchos.extension = {
@@ -3329,21 +3401,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3622E4321FFAA250045120E /* BMSCredentials.plist in Resources */,
+				E3622E4621FFAA3E0045120E /* art.scnassets in Resources */,
 				EF5EEDE01EC1580800C8655E /* Below_LongDistance.gif in Resources */,
+				E3622E3D21FFAA250045120E /* calories.png in Resources */,
 				EF5EEDDC1EC1580800C8655E /* Above_LongDistance.gif in Resources */,
 				EF5EEDE21EC1580800C8655E /* Below_WeightLoss.gif in Resources */,
+				E3622E4221FFAA250045120E /* heart.png in Resources */,
 				EF5EEDDB1EC1580800C8655E /* Above_Interval.gif in Resources */,
 				EF7FD0DE1E7C7340003A5A4A /* LaunchScreen.storyboard in Resources */,
+				E3622E4021FFAA250045120E /* steps.png in Resources */,
 				EF7FD0DB1E7C7340003A5A4A /* Assets.xcassets in Resources */,
 				EF5EEDDD1EC1580800C8655E /* Above_Recreational.gif in Resources */,
 				EF7FD0D91E7C7340003A5A4A /* Main.storyboard in Resources */,
 				EF5EEDE51EC1580800C8655E /* On_Recreational.gif in Resources */,
+				E3622E3E21FFAA250045120E /* twitter.png in Resources */,
 				EF5EEDE31EC1580800C8655E /* On_Interval.gif in Resources */,
 				EF5EEDDF1EC1580800C8655E /* Below_Interval.gif in Resources */,
+				E3622E4121FFAA250045120E /* distance.png in Resources */,
 				EF5EEDE61EC1580800C8655E /* On_WeightLoss.gif in Resources */,
 				EF5EEDDE1EC1580800C8655E /* Above_WeightLoss.gif in Resources */,
+				E3622E3F21FFAA250045120E /* linkedin.png in Resources */,
 				EF5EEDE41EC1580800C8655E /* On_LongDistance.gif in Resources */,
 				EF5EEDE11EC1580800C8655E /* Below_Recreational.gif in Resources */,
+				E3622E4421FFAA250045120E /* facebook.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4357,16 +4438,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3622E5121FFAABC0045120E /* Face.swift in Sources */,
 				EF3D15531E899AA800BF417E /* Constants.m in Sources */,
+				E3622E5421FFAABC0045120E /* CIImage+FaceDetection.swift in Sources */,
+				E3622E3121FFA9A60045120E /* SteveMartinelli_2096165720.mlmodel in Sources */,
 				EF7FD0D61E7C7340003A5A4A /* MyActivityViewController.m in Sources */,
+				E3622E5221FFAABC0045120E /* SCNVector3+Distance.swift in Sources */,
 				EF4219391E8C97D200B17356 /* User.m in Sources */,
 				EF1C2C9A1EA83C1400CD6D27 /* UserTableViewCell.m in Sources */,
 				EF4219321E8C58BE00B17356 /* SatoriConnectionManager.m in Sources */,
-				E3622E2B21FF98E10045120E /* Test.swift in Sources */,
+				E3622E5021FFAABC0045120E /* SCNNode+Text.swift in Sources */,
+				E3622E3021FFA9A60045120E /* SanjeevGhimire_967590069.mlmodel in Sources */,
+				E3622E3321FFA9A60045120E /* ScottDAngelo_1040670748.mlmodel in Sources */,
 				EF1C2C941EA6FCED00CD6D27 /* ProfileViewController.m in Sources */,
+				E3622E3221FFA9A60045120E /* DefaultCustomModel_1161153938.mlmodel in Sources */,
+				E3622E5321FFAABC0045120E /* Constant.swift in Sources */,
 				EF7B3F9C1EB80D09002E8B23 /* UserActivityViewController.m in Sources */,
 				EF7FD0D31E7C7340003A5A4A /* AppDelegate.m in Sources */,
 				EF4219351E8C8B6100B17356 /* SharingViewController.m in Sources */,
+				E3622E4F21FFAABC0045120E /* CloudantRESTCall.swift in Sources */,
+				E3622E4821FFAA480045120E /* ARKitViewController.swift in Sources */,
 				EF7FD0D01E7C7340003A5A4A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4527,15 +4618,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "RealFitness WatchKit Extension/RealFitness WatchKit Extension.entitlements";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 93HEPAR872;
 				INFOPLIST_FILE = "RealFitness WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = satori.platform.RealFitness.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch-vitim.VRWOfull.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Debug;
 		};
@@ -4544,15 +4635,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "RealFitness WatchKit Extension/RealFitness WatchKit Extension.entitlements";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 93HEPAR872;
 				INFOPLIST_FILE = "RealFitness WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = satori.platform.RealFitness.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch-vitim.VRWOfull.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Release;
 		};
@@ -4560,15 +4651,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 93HEPAR872;
 				IBSC_MODULE = RealFitness_WatchKit_Extension;
 				INFOPLIST_FILE = "RealFitness WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = satori.platform.RealFitness.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch-vitim.VRWOfull.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Debug;
 		};
@@ -4576,15 +4667,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 93HEPAR872;
 				IBSC_MODULE = RealFitness_WatchKit_Extension;
 				INFOPLIST_FILE = "RealFitness WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = satori.platform.RealFitness.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch-vitim.VRWOfull.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Release;
 		};
@@ -4595,17 +4686,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RealFitness/RealFitness.entitlements;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 93HEPAR872;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = RealFitness/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = satori.platform.RealFitness;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch-vitim.VRWOfull";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RealFitness/RealFitness-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -4621,17 +4712,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RealFitness/RealFitness.entitlements;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 93HEPAR872;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = RealFitness/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = satori.platform.RealFitness;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch-vitim.VRWOfull";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RealFitness/RealFitness-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

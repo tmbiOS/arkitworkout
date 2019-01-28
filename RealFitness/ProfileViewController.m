@@ -51,7 +51,14 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     self.activeTextField = textField;
 }
-    
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+  return TRUE;
+}
+
+
+
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     if (textField == self.nameField) {
         if (textField.text.length == 0) {
