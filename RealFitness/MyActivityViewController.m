@@ -233,6 +233,11 @@
     
     dispatch_async(_messageQueue, ^{
         [self.messages addEntriesFromDictionary:message];
+
+      //Our
+        NSDictionary* messages = @{@"messages": @[self.messages]};
+        [DBManager addValueWithJson:messages];
+      //
         NSError *e = nil;
         NSData *messageData = [NSJSONSerialization
                                dataWithJSONObject:self.messages

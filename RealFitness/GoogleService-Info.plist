@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>515190404677-3ta7lb7merhh4nbi6999i2j87gfr3fk1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.515190404677-3ta7lb7merhh4nbi6999i2j87gfr3fk1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDvDESqro4nrhIJCdLB-rPODvTCrCfuXR4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>515190404677</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.vitim.Workout-ARKit-iOS</string>
+	<key>PROJECT_ID</key>
+	<string>workout-arkit</string>
+	<key>STORAGE_BUCKET</key>
+	<string>workout-arkit.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:515190404677:ios:3e946a4729048d05</string>
+	<key>DATABASE_URL</key>
+	<string>https://workout-arkit.firebaseio.com</string>
+</dict>
+</plist>

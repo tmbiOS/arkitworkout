@@ -29,6 +29,10 @@
 		E3622E5421FFAABC0045120E /* CIImage+FaceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E4E21FFAABC0045120E /* CIImage+FaceDetection.swift */; };
 		E3622E5621FFAD8C0045120E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3622E5521FFAD8C0045120E /* HealthKit.framework */; };
 		E3622E5821FFC2480045120E /* UserDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E5721FFC2480045120E /* UserDetailsTableViewController.swift */; };
+		E3622E5A21FFDB410045120E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3622E5921FFDB410045120E /* GoogleService-Info.plist */; };
+		E3622E5E21FFDB710045120E /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E5B21FFDB710045120E /* Measurement.swift */; };
+		E3622E5F21FFDB710045120E /* JsonMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E5C21FFDB710045120E /* JsonMappable.swift */; };
+		E3622E6021FFDB710045120E /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E5D21FFDB710045120E /* DBManager.swift */; };
 		EDA90570733C0BAB019CBE4F /* Pods_RealFitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3652FC4311B148E6E9DE289 /* Pods_RealFitness.framework */; };
 		EF0187231E80BD8A006A496E /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0187221E80BD8A006A496E /* WatchConnectivity.framework */; };
 		EF1C2C7F1EA5622300CD6D27 /* TimerInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1C2C7E1EA5622300CD6D27 /* TimerInterfaceController.m */; };
@@ -1075,6 +1079,10 @@
 		E3622E4E21FFAABC0045120E /* CIImage+FaceDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIImage+FaceDetection.swift"; sourceTree = "<group>"; };
 		E3622E5521FFAD8C0045120E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		E3622E5721FFC2480045120E /* UserDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsTableViewController.swift; sourceTree = "<group>"; };
+		E3622E5921FFDB410045120E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E3622E5B21FFDB710045120E /* Measurement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		E3622E5C21FFDB710045120E /* JsonMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonMappable.swift; sourceTree = "<group>"; };
+		E3622E5D21FFDB710045120E /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		EF0187221E80BD8A006A496E /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		EF1C2C7D1EA5622300CD6D27 /* TimerInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerInterfaceController.h; sourceTree = "<group>"; };
 		EF1C2C7E1EA5622300CD6D27 /* TimerInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerInterfaceController.m; sourceTree = "<group>"; };
@@ -2113,6 +2121,7 @@
 		E35CA18021FF8EFB00D56311 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				E3622E5921FFDB410045120E /* GoogleService-Info.plist */,
 				E3622E4E21FFAABC0045120E /* CIImage+FaceDetection.swift */,
 				E3622E4921FFAABB0045120E /* CloudantRESTCall.swift */,
 				E3622E4D21FFAABC0045120E /* Constant.swift */,
@@ -2121,6 +2130,9 @@
 				E3622E4C21FFAABC0045120E /* SCNVector3+Distance.swift */,
 				E3622E4721FFAA480045120E /* ARKitViewController.swift */,
 				E3622E5721FFC2480045120E /* UserDetailsTableViewController.swift */,
+				E3622E5D21FFDB710045120E /* DBManager.swift */,
+				E3622E5C21FFDB710045120E /* JsonMappable.swift */,
+				E3622E5B21FFDB710045120E /* Measurement.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -3406,6 +3418,7 @@
 			files = (
 				E3622E4321FFAA250045120E /* BMSCredentials.plist in Resources */,
 				E3622E4621FFAA3E0045120E /* art.scnassets in Resources */,
+				E3622E5A21FFDB410045120E /* GoogleService-Info.plist in Resources */,
 				EF5EEDE01EC1580800C8655E /* Below_LongDistance.gif in Resources */,
 				E3622E3D21FFAA250045120E /* calories.png in Resources */,
 				EF5EEDDC1EC1580800C8655E /* Above_LongDistance.gif in Resources */,
@@ -4442,9 +4455,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3622E5121FFAABC0045120E /* Face.swift in Sources */,
+				E3622E5E21FFDB710045120E /* Measurement.swift in Sources */,
 				EF3D15531E899AA800BF417E /* Constants.m in Sources */,
 				E3622E5421FFAABC0045120E /* CIImage+FaceDetection.swift in Sources */,
 				E3622E3121FFA9A60045120E /* SteveMartinelli_2096165720.mlmodel in Sources */,
+				E3622E6021FFDB710045120E /* DBManager.swift in Sources */,
 				EF7FD0D61E7C7340003A5A4A /* MyActivityViewController.m in Sources */,
 				E3622E5221FFAABC0045120E /* SCNVector3+Distance.swift in Sources */,
 				EF4219391E8C97D200B17356 /* User.m in Sources */,
@@ -4457,6 +4472,7 @@
 				EF1C2C941EA6FCED00CD6D27 /* ProfileViewController.m in Sources */,
 				E3622E3221FFA9A60045120E /* DefaultCustomModel_1161153938.mlmodel in Sources */,
 				E3622E5321FFAABC0045120E /* Constant.swift in Sources */,
+				E3622E5F21FFDB710045120E /* JsonMappable.swift in Sources */,
 				EF7B3F9C1EB80D09002E8B23 /* UserActivityViewController.m in Sources */,
 				EF7FD0D31E7C7340003A5A4A /* AppDelegate.m in Sources */,
 				EF4219351E8C8B6100B17356 /* SharingViewController.m in Sources */,
