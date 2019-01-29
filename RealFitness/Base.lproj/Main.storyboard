@@ -401,20 +401,20 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active: Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4az-Gi-k7Y">
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active: Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4az-Gi-k7Y">
                                             <rect key="frame" x="83" y="44" width="67.5" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Inactive_heart0" translatesAutoresizingMaskIntoConstraints="NO" id="7dp-nc-J2x">
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Inactive_heart0" translatesAutoresizingMaskIntoConstraints="NO" id="7dp-nc-J2x">
                                             <rect key="frame" x="263.5" y="27.5" width="25" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="1de-TT-I8m"/>
                                                 <constraint firstAttribute="width" constant="25" id="Nhb-iZ-TpW"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bpm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nC6-As-t01">
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bpm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nC6-As-t01">
                                             <rect key="frame" x="298.5" y="29.5" width="34.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -688,7 +688,6 @@
                         <outlet property="runningImageView" destination="5aD-Nx-YDs" id="k7q-Wd-f4i"/>
                         <outlet property="targetStateLabel" destination="6u3-4e-tPZ" id="yY9-Wf-DVg"/>
                         <outlet property="workoutGoal" destination="avQ-Eh-znJ" id="TGP-9D-UTr"/>
-                        <segue destination="hKw-Ap-ygx" kind="show" identifier="UserDetailsTableViewController" id="Gm9-WD-BUG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcF-yK-IGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -703,6 +702,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </arscnView>
+                    <navigationItem key="navigationItem" title="Face Recognition" id="DNC-kZ-dzn">
+                        <barButtonItem key="rightBarButtonItem" image="Profile-1" id="bwM-X8-gDz">
+                            <connections>
+                                <segue destination="hKw-Ap-ygx" kind="show" id="Zmh-rF-tGr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="sceneView" destination="jEH-FQ-o8A" id="oNX-Jw-NXF"/>
                     </connections>
@@ -714,9 +720,9 @@
         <!--Details-->
         <scene sceneID="dW2-oS-8TT">
             <objects>
-                <tableViewController title="Details" id="hKw-Ap-ygx" customClass="UserDetailsTableViewController" customModule="RealFitness" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UserDetailsTableViewController" title="Details" id="hKw-Ap-ygx" customClass="UserDetailsTableViewController" customModule="RealFitness" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NS3-FK-glg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -879,7 +885,7 @@
                         <outlet property="linkedinLabel" destination="IT8-O9-i8h" id="RlX-8e-wbi"/>
                         <outlet property="locationLabel" destination="d1N-2x-YS6" id="kln-to-g7W"/>
                         <outlet property="nameLabel" destination="90q-b0-i8n" id="Qkg-3M-kff"/>
-                        <outlet property="phoneLabel" destination="Cbz-IL-I0n" id="Ecb-RX-VMP"/>
+                        <outlet property="phoneLabel" destination="cVW-SM-KhP" id="oMe-Fj-NwE"/>
                         <outlet property="twitterLabel" destination="P04-YE-B2F" id="6ex-26-yIp"/>
                     </connections>
                 </tableViewController>
@@ -896,6 +902,7 @@
         <image name="MyActivity" width="30.5" height="30.5"/>
         <image name="MyActivitySelected" width="30.5" height="30.5"/>
         <image name="Profile" width="200" height="200"/>
+        <image name="Profile-1" width="24" height="24"/>
         <image name="Social" width="30" height="30"/>
         <image name="SocialSelected" width="30" height="30"/>
         <image name="TimeElapsed" width="54" height="70"/>

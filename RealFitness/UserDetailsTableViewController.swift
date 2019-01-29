@@ -12,7 +12,7 @@ class UserDetailsTableViewController: UITableViewController {
 
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var locationLabel: UILabel!
-  @IBOutlet weak var phoneLabel: UITableViewCell!
+  @IBOutlet weak var phoneLabel: UILabel!
   @IBOutlet weak var facebookLabel: UILabel!
 
   @IBOutlet weak var twitterLabel: UILabel!

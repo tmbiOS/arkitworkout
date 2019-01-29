@@ -16,7 +16,7 @@
 @interface SharingViewController () {
     dispatch_queue_t _messageQueue;
 }
-@property (nonatomic, strong) NSMutableArray<User *> *users;
+@property (nonatomic, strong) NSArray<User *> *users;
 @property (nonatomic, strong) SatoriConnectionManager *connMgr;
 @property (nonatomic, strong) SubscriptionDataHandler messageHandler;
 @property (nonatomic, strong) NSMutableDictionary<NSString*, NSNumber*> *userDict;
@@ -35,42 +35,16 @@
     self.userDict = [NSMutableDictionary<NSString*, NSNumber*> new];
     self.userAvatar = [NSMutableDictionary<NSString*, UIImage*> new];
     
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    [activityIndicator startAnimating];
-    activityIndicator.center = self.view.center;
-    [self.view addSubview:activityIndicator];
-    [self.view bringSubviewToFront:activityIndicator];
-    
-    
-    __weak SharingViewController *weakSelf = self;
-    self.messageHandler = ^(NSDictionary *body, NSDictionary *error) {
-        if (body) {
-            [activityIndicator stopAnimating];
-            NSError *error = nil;
-            NSDictionary* msg = [[body objectForKey:@"messages"] objectAtIndex:0];
-            User *user = [[User alloc] initWithDictionary:msg error:&error];
-            if (error) {
-                NSLog(@"Error parsing user info %@", error);
-            }
-            else {
-                NSNumber *indx = [weakSelf.userDict objectForKey:user.userid];
-                if (indx == nil) {
-                    NSUInteger index = weakSelf.users.count;
-                    [weakSelf.users addObject:user];
-                    [weakSelf.userDict setObject:[NSNumber numberWithInteger:index] forKey:user.userid];
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [weakSelf.tableView reloadData];
-                    });
-                }
-                else {
-                    [weakSelf.users replaceObjectAtIndex:[indx intValue] withObject:user];
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [[NSNotificationCenter defaultCenter] postNotificationName:UserDataUpdated object:nil userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:user, @"User", nil]];
-                    });
-                }
-            }
-        }
-    };
+
+   __weak SharingViewController *weakSelf = self;
+  [DBManager observeUsersWithCompletion:^(NSArray<User *>* dbUsers) {
+    self.users = dbUsers;
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [weakSelf.tableView reloadData];
+    });
+  }];
+
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -78,37 +52,6 @@
     for (UserTableViewCell *cell in self.tableView.visibleCells) {
         [cell animateHeart];
     }
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-
-  NSDictionary* user = @{@"userid": @"7A3E2903-A4AF-4443-AB67-B591C670105D",
-                          @"username": @"Andrey",
-                          @"calories": @"0.1",
-                          @"distance": @"0.43",
-                          @"duration": @"0:00:14",
-                          @"heartrate": @"59",
-                          @"heartrange": @"90-104",
-                          @"workoutgoal": @"Recreational"};
-
-  NSDictionary* users = @{@"messages": @[user]};
-
-  self.messageHandler(users, nil);
-
-    __weak SharingViewController *weakSelf = self;
-
-  /*dispatch_async(_messageQueue, ^{
-        NSDictionary *body = [[NSDictionary alloc] initWithObjectsAndKeys: @"select * from `Fitness`", @"filter", ChannelName, @"subscription_id", [NSNumber numberWithInt:1], @"period", nil];
-        rtm_status stat = [weakSelf.connMgr subscribeWithBody:body withMessageHandler:weakSelf.messageHandler];
-        if (stat != RTM_OK) {
-            NSLog(@"Error subscribing to %@", ChannelName);
-        }
-        
-        while ([weakSelf.connMgr.rtm poll] >= 0) {
-            sleep(1);
-        }
-    });*/
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

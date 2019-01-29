@@ -3,3 +3,4 @@
 //
 
 #import "UserActivityViewController.h"
+#import "User.h"

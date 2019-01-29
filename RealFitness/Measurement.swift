@@ -8,20 +8,20 @@
 
 import Foundation
 
-struct Measurement: JsonMappable {
+class Measurement: NSObject, JsonMappable {
   
   //  enum Type: JsonMappable {
   //    case jogging, longrunning, sprint
   //  }
   
-  let calories: String
-  let distance: String
-  let duration: String
-  let heartrange: String
-  let heartrate: String
-  let userid: String
-  let username: String
-  let workoutgoal: String
+  var calories: String
+  var distance: String
+  var duration: String
+  var heartrange: String
+  var heartrate: String
+  var userid: String
+  var username: String
+  var workoutgoal: String
   
 }
 

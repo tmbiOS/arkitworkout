@@ -131,52 +131,22 @@
       self.navigationItem.rightBarButtonItem = infoButton;
     }
 
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    [activityIndicator startAnimating];
-    activityIndicator.center = self.runningImageView.center;
-    [self.view addSubview:activityIndicator];
-    [self.view bringSubviewToFront:activityIndicator];
-    
-    __weak UserActivityViewController *weakSelf = self;
-    self.messageHandler = ^(NSDictionary *body, NSDictionary *error) {
-        if (body) {
-            NSError *error = nil;
-            NSDictionary* msg = [[body objectForKey:@"messages"] objectAtIndex:0];
-            User *user = [[User alloc] initWithDictionary:msg error:&error];
-            if (error) {
-                NSLog(@"Error parsing user info %@", error);
-            }
-            else {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [activityIndicator stopAnimating];
-                    [weakSelf setLabelColors:[Constants colorForHeartrate:[user.heartrate intValue]]];
-                    weakSelf.distanceLabel.text = [NSString stringWithFormat:@"%@ M", user.distance];
-                    weakSelf.caloriesLabel.text =[NSString stringWithFormat:@"%@ CAL", user.calories];
-                    weakSelf.heartrateLabel.text =[NSString stringWithFormat:@"%@", user.heartrate];
-                    weakSelf.durationLabel.text =[NSString stringWithFormat:@"%@",  user.duration];
-                    weakSelf.heartRange.text = ([user.heartrange length] > 0) ? [NSString stringWithFormat:@"%@ BPM", user.heartrange] : @"";
-                    weakSelf.workoutGoal.text =[NSString stringWithFormat:@"%@", user.workoutgoal];
-                    [weakSelf.heartRange setTextColor:[[Constants workoutGoalColorBands] objectForKey:weakSelf.workoutGoal.text]];
-                    weakSelf.targetStateLabel.text = [Constants stateForHeartrate:[user.heartrate intValue] andGoal:weakSelf.workoutGoal.text];
-                    weakSelf.currentTargetState = weakSelf.targetStateLabel.text;
-                    [weakSelf showRunningAnimation];
-                });
-            }
-        }
-    };
-    
-    /*dispatch_async(_messageQueue, ^{
-        NSDictionary *body = [[NSDictionary alloc] initWithObjectsAndKeys: [NSString stringWithFormat:@"select * from `Fitness` where userid like \"%@\"", self.userId], @"filter", self.userId, @"subscription_id", [NSNumber numberWithInt:1], @"period", nil];
-        rtm_status stat = [weakSelf.connMgr subscribeWithBody:body withMessageHandler:weakSelf.messageHandler];
-        if (stat != RTM_OK) {
-            NSLog(@"Error subscribing to %@", ChannelName);
-        }
-        
-        // Poll RTM to receive subscribe response
-        while ([weakSelf.connMgr.rtm poll] >= 0) {
-            sleep(1);
-        }
-    });*/
+  __weak UserActivityViewController *weakSelf = self;
+  [DBManager observeUserMeasurementsWithId: self.userId completion:^(User * user) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [weakSelf setLabelColors:[Constants colorForHeartrate:[user.heartrate intValue]]];
+      weakSelf.distanceLabel.text = [NSString stringWithFormat:@"%@ M", user.distance];
+      weakSelf.caloriesLabel.text =[NSString stringWithFormat:@"%@ CAL", user.calories];
+      weakSelf.heartrateLabel.text =[NSString stringWithFormat:@"%@", user.heartrate];
+      weakSelf.durationLabel.text =[NSString stringWithFormat:@"%@",  user.duration];
+      weakSelf.heartRange.text = ([user.heartrange length] > 0) ? [NSString stringWithFormat:@"%@ BPM", user.heartrange] : @"";
+      weakSelf.workoutGoal.text =[NSString stringWithFormat:@"%@", user.workoutgoal];
+      [weakSelf.heartRange setTextColor:[[Constants workoutGoalColorBands] objectForKey:weakSelf.workoutGoal.text]];
+      weakSelf.targetStateLabel.text = [Constants stateForHeartrate:[user.heartrate intValue] andGoal:weakSelf.workoutGoal.text];
+      weakSelf.currentTargetState = weakSelf.targetStateLabel.text;
+      [weakSelf showRunningAnimation];
+    });
+  }];
 }
 
 - (void)closeButtonDidTap {

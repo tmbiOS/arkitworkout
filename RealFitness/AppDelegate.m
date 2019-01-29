@@ -22,6 +22,10 @@
       NSLog(@"%@", message);
     }];
 
+    [DBManager observeUsersWithCompletion:^(NSArray<User *> * users) {
+      NSLog(@"%@", users);
+    }];
+
     return YES;
 }
 

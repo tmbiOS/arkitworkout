@@ -109,7 +109,24 @@
 }
 
 - (void)showTabBarController {
+
     dispatch_async(dispatch_get_main_queue(), ^{
+
+      if ([self.nameField.text length] > 0) {
+        NSDictionary* user = @{@"userid": self.nameField.text,
+                               @"username": self.nameField.text,
+                               @"calories": @"",
+                               @"distance": @"",
+                               @"duration": @"",
+                               @"heartrate": @"",
+                               @"heartrange": @"",
+                               @"workoutgoal": @""};
+        NSDictionary* messages = @{@"messages": @[user]};
+
+        [DBManager addValueWithDatabase:@"users" json:messages];
+      }
+
+      
         UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         id<UIApplicationDelegate> appDelegate = [UIApplication sharedApplication].delegate;
         [self dismissViewControllerAnimated:YES completion:nil];

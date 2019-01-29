@@ -176,6 +176,10 @@ class ARKitViewController: UIViewController, ARSCNViewDelegate {
     let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
     guard let userActivityController = storyboard.instantiateViewController(withIdentifier: "UserActivityViewController") as? UserActivityViewController else { return }
     userActivityController.isARDestination = true
+
+    //#error
+    // TODO need to send userId to userActivityController.
+    //In our case userId = userName (Name in first screen. Можно сделать хард код для каждого пользователя. Главное, чтобы они вбивали имя в профиле такое же как имя будет в модели для распознавания лица.
     userActivityController.userId = "12" //user.userid
     userActivityController.userName = "andrey" //user.username
     let navigationController = UINavigationController(rootViewController: userActivityController)
@@ -544,4 +548,18 @@ class ARKitViewController: UIViewController, ARSCNViewDelegate {
             return Disposables.create()
         }
     }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let vc = segue.destination as? UserDetailsTableViewController {
+      //#error
+      //Отправить данные распознанной модели
+      _ = vc.loadView()
+      vc.nameLabel.text = "Name"
+      vc.locationLabel.text = "location"
+      vc.phoneLabel.text = "phone"
+      vc.facebookLabel.text = "facebook"
+      vc.twitterLabel.text = "twitter"
+      vc.linkedinLabel.text = "linkedin"
+    }
+  }
 }

@@ -212,6 +212,9 @@
 }
 
 - (void)handleMessage:(NSDictionary*)message {
+
+    NSString* goal = [NSString stringWithFormat:@"%@", [message objectForKey:@"workoutgoal"]];
+
     dispatch_async(dispatch_get_main_queue(), ^{
         [self setLabelColors:[Constants colorForHeartrate:[[message objectForKey:@"heartrate"] intValue]]];
         self.distanceLabel.text = [NSString stringWithFormat:@"%@ M", [message objectForKey:@"distance"]];
@@ -219,7 +222,7 @@
         self.heartrateLabel.text =[NSString stringWithFormat:@"%@", [message objectForKey:@"heartrate"]];
         self.durationLabel.text =[NSString stringWithFormat:@"%@", [message objectForKey:@"duration"]];
         self.heartRange.text = ([[message objectForKey:@"heartrange"] length] > 0) ? [NSString stringWithFormat:@"%@ BPM", [message objectForKey:@"heartrange"]] : @"";
-        self.workoutGoal.text =[NSString stringWithFormat:@"%@", [message objectForKey:@"workoutgoal"]];
+        self.workoutGoal.text = goal;
         if ((self.workoutGoal.text == nil) || (self.workoutGoal.text.length == 0)) {
             self.lastTargetState = @"";
             self.currentTargetState = @"";
@@ -232,11 +235,15 @@
     });
     
     dispatch_async(_messageQueue, ^{
+
+      if ((goal == nil) || (goal == 0)) {
+        return;
+      }
         [self.messages addEntriesFromDictionary:message];
 
       //Our
         NSDictionary* messages = @{@"messages": @[self.messages]};
-        [DBManager addValueWithJson:messages];
+      [DBManager addValueWithDatabase:@"measurement" json:messages];
       //
 
       /*NSError *e = nil;
