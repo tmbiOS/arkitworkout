@@ -121,17 +121,16 @@
     self.lastWorkoutGoal = @"";
     [self.navigationItem setTitle:self.userName];
     [self setLabelColors:[UIColor whiteColor]];
-    
-    /*UIButton *button =  [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:[UIImage imageNamed:@"AR_Kit-180"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(showHideButtonsAction) forControlEvents:UIControlEventTouchUpInside];
-    [button setFrame:CGRectMake(0, 0, 50, 50)];
-    UIEdgeInsets insets = UIEdgeInsetsMake(0, 10.0, 0, 0);
-    [button setImageEdgeInsets:insets];
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
-    self.navigationItem.rightBarButtonItem = barButton;
-    [self setupReactionsButton];*/
-    
+
+    if (self.isARDestination) {
+      UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(closeButtonDidTap)];
+      self.navigationItem.leftBarButtonItem = closeButton;
+
+
+      UIBarButtonItem *infoButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Profile-1"] style:UIBarButtonItemStyleDone target:self action:@selector(infoButtonDidTap)];
+      self.navigationItem.rightBarButtonItem = infoButton;
+    }
+
     UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [activityIndicator startAnimating];
     activityIndicator.center = self.runningImageView.center;
@@ -151,7 +150,7 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [activityIndicator stopAnimating];
                     [weakSelf setLabelColors:[Constants colorForHeartrate:[user.heartrate intValue]]];
-                    weakSelf.distanceLabel.text = [NSString stringWithFormat:@"%@ MI", user.distance];
+                    weakSelf.distanceLabel.text = [NSString stringWithFormat:@"%@ M", user.distance];
                     weakSelf.caloriesLabel.text =[NSString stringWithFormat:@"%@ CAL", user.calories];
                     weakSelf.heartrateLabel.text =[NSString stringWithFormat:@"%@", user.heartrate];
                     weakSelf.durationLabel.text =[NSString stringWithFormat:@"%@",  user.duration];
@@ -180,6 +179,14 @@
     });
 }
 
+- (void)closeButtonDidTap {
+  [self dismissViewControllerAnimated:true completion:nil];
+}
+
+- (void)infoButtonDidTap {
+  [self performSegueWithIdentifier:@"UserDetailsTableViewController" sender:nil];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     self.goalContainerView.layer.cornerRadius = 6.0;
     self.goalContainerView.layer.borderWidth = 1.0;
@@ -188,11 +195,8 @@
 
 - (void)showHideButtonsAction
 {
-    //Show segue to Arkit
-  UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-  ARKitViewController *arKitViewController = [storyboard instantiateViewControllerWithIdentifier:@"ARKitViewController"];
-  [self.navigationController pushViewController:arKitViewController animated:YES];
 }
+  
 
 - (NSString*)getReactionForIndex:(int)index {
     switch (index) {

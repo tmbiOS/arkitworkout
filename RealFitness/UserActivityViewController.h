@@ -20,4 +20,6 @@
 @property (strong, nonatomic) NSString *userId;
 @property (nonatomic, strong) NSString *userName;
 
+@property (assign, nonatomic) BOOL isARDestination;
+
 @end

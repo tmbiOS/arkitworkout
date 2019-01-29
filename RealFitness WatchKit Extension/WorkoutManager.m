@@ -90,7 +90,7 @@
 }
     
 -(double)distanceAsDouble {
-    return [self.distanceTravelled doubleValueForUnit:[HKUnit mileUnit]];
+    return [self.distanceTravelled doubleValueForUnit:[HKUnit meterUnit]];
 }
     
 - (void)energyBurnedCaloriesToUnit:(double)calories {
@@ -98,7 +98,7 @@
 }
     
 - (void)distanceMilesToUnit:(double)miles {
-    self.distanceTravelled = [HKQuantity quantityWithUnit:[HKUnit mileUnit] doubleValue:miles];
+    self.distanceTravelled = [HKQuantity quantityWithUnit:[HKUnit meterUnit] doubleValue:miles];
 }
 
 - (void)resetReadings {
@@ -144,7 +144,7 @@
     
 -(void)sendMessage {
     
-    double dist = [self.distanceTravelled doubleValueForUnit:[HKUnit mileUnit]];
+    double dist = [self.distanceTravelled doubleValueForUnit:[HKUnit meterUnit]];
     double cals = [self.energyBurned doubleValueForUnit:[HKUnit kilocalorieUnit]];
     
     NSTimeInterval duration = [self computeDurationWithStartDate:self.workoutStartDate endDate:self.workoutEndDate];
@@ -168,7 +168,7 @@
         NSArray<HKQuantitySample *>* quantitySamples = (NSArray<HKQuantitySample *>*)samples;
         for (HKQuantitySample *sample in quantitySamples) {
             if (identifier == HKQuantityTypeIdentifierDistanceWalkingRunning) {
-                double newDistance = [sample.quantity doubleValueForUnit:[HKUnit mileUnit]];
+                double newDistance = [sample.quantity doubleValueForUnit:[HKUnit meterUnit]];
                 [self distanceMilesToUnit:[self distanceAsDouble] + newDistance];
             }
             else if (identifier == HKQuantityTypeIdentifierActiveEnergyBurned) {

@@ -28,6 +28,7 @@
 		E3622E5321FFAABC0045120E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E4D21FFAABC0045120E /* Constant.swift */; };
 		E3622E5421FFAABC0045120E /* CIImage+FaceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E4E21FFAABC0045120E /* CIImage+FaceDetection.swift */; };
 		E3622E5621FFAD8C0045120E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3622E5521FFAD8C0045120E /* HealthKit.framework */; };
+		E3622E5821FFC2480045120E /* UserDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3622E5721FFC2480045120E /* UserDetailsTableViewController.swift */; };
 		EDA90570733C0BAB019CBE4F /* Pods_RealFitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3652FC4311B148E6E9DE289 /* Pods_RealFitness.framework */; };
 		EF0187231E80BD8A006A496E /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0187221E80BD8A006A496E /* WatchConnectivity.framework */; };
 		EF1C2C7F1EA5622300CD6D27 /* TimerInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1C2C7E1EA5622300CD6D27 /* TimerInterfaceController.m */; };
@@ -1073,6 +1074,7 @@
 		E3622E4D21FFAABC0045120E /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		E3622E4E21FFAABC0045120E /* CIImage+FaceDetection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIImage+FaceDetection.swift"; sourceTree = "<group>"; };
 		E3622E5521FFAD8C0045120E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		E3622E5721FFC2480045120E /* UserDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsTableViewController.swift; sourceTree = "<group>"; };
 		EF0187221E80BD8A006A496E /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		EF1C2C7D1EA5622300CD6D27 /* TimerInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerInterfaceController.h; sourceTree = "<group>"; };
 		EF1C2C7E1EA5622300CD6D27 /* TimerInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerInterfaceController.m; sourceTree = "<group>"; };
@@ -2118,6 +2120,7 @@
 				E3622E4A21FFAABB0045120E /* SCNNode+Text.swift */,
 				E3622E4C21FFAABC0045120E /* SCNVector3+Distance.swift */,
 				E3622E4721FFAA480045120E /* ARKitViewController.swift */,
+				E3622E5721FFC2480045120E /* UserDetailsTableViewController.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -4449,6 +4452,7 @@
 				EF4219321E8C58BE00B17356 /* SatoriConnectionManager.m in Sources */,
 				E3622E5021FFAABC0045120E /* SCNNode+Text.swift in Sources */,
 				E3622E3021FFA9A60045120E /* SanjeevGhimire_967590069.mlmodel in Sources */,
+				E3622E5821FFC2480045120E /* UserDetailsTableViewController.swift in Sources */,
 				E3622E3321FFA9A60045120E /* ScottDAngelo_1040670748.mlmodel in Sources */,
 				EF1C2C941EA6FCED00CD6D27 /* ProfileViewController.m in Sources */,
 				E3622E3221FFA9A60045120E /* DefaultCustomModel_1161153938.mlmodel in Sources */,

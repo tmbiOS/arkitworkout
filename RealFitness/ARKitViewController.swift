@@ -29,6 +29,7 @@ import CoreML
 class ARKitViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    var infoButton: UIButton!
     var 👜 = DisposeBag()
     var faces: [Face] = []
     var bounds: CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
@@ -43,6 +44,8 @@ class ARKitViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        addInfoButton()
+      
         // Register observer
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(didBecomeActive),
@@ -160,6 +163,24 @@ class ARKitViewController: UIViewController, ARSCNViewDelegate {
         // {{objectstorageConnect}}
         // {{applaunchFeatureEnable}}
     }
+
+  func addInfoButton() {
+    infoButton = UIButton(type: .infoLight)
+    infoButton.addTarget(self, action: #selector(didTapInfoButton(_:)), for: .touchUpInside)
+    sceneView.addSubview(infoButton)
+  }
+
+  @objc private func didTapInfoButton(_ sender: UIButton) {
+
+    //User *user = [self.users objectAtIndex:indexPath.row];
+    let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+    guard let userActivityController = storyboard.instantiateViewController(withIdentifier: "UserActivityViewController") as? UserActivityViewController else { return }
+    userActivityController.isARDestination = true
+    userActivityController.userId = "12" //user.userid
+    userActivityController.userName = "andrey" //user.username
+    let navigationController = UINavigationController(rootViewController: userActivityController)
+    present(navigationController, animated: true, completion: nil)
+  }
 
     @objc func didBecomeActive(_ notification: Notification) {
         // {{analyticsSend}}

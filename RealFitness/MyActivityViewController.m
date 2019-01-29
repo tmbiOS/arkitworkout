@@ -214,7 +214,7 @@
 - (void)handleMessage:(NSDictionary*)message {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self setLabelColors:[Constants colorForHeartrate:[[message objectForKey:@"heartrate"] intValue]]];
-        self.distanceLabel.text = [NSString stringWithFormat:@"%@ MI", [message objectForKey:@"distance"]];
+        self.distanceLabel.text = [NSString stringWithFormat:@"%@ M", [message objectForKey:@"distance"]];
         self.caloriesLabel.text =[NSString stringWithFormat:@"%@ CAL", [message objectForKey:@"calories"]];
         self.heartrateLabel.text =[NSString stringWithFormat:@"%@", [message objectForKey:@"heartrate"]];
         self.durationLabel.text =[NSString stringWithFormat:@"%@", [message objectForKey:@"duration"]];

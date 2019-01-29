@@ -19,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureRecognizerDidFire)];
+    [self.view addGestureRecognizer:recognizer];
     [self registerForKeyboardNotifications];
     self.nameField.delegate = self;
     self.ageField.delegate = self;
@@ -32,11 +35,15 @@
                   [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning], nil];
 }
 
+- (void)tapGestureRecognizerDidFire {
+  [self.view endEditing:true];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     NSDictionary *attributes = @{NSForegroundColorAttributeName: [UIColor lightTextColor], NSFontAttributeName: [UIFont systemFontOfSize:12.0]};
     
     self.nameField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"John Doe" attributes:attributes];
-    self.weightField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"160 lbs" attributes:attributes];
+    self.weightField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"80 kg" attributes:attributes];
     self.ageField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"25 years" attributes:attributes];
     self.continueButton.layer.cornerRadius = 6.0;
     self.avatarImageView.layer.cornerRadius = ceil(self.avatarImageView.frame.size.height/2.0);
