@@ -180,7 +180,10 @@
     
 - (IBAction)beginButtonTapped:(id)sender {
     [[NSUserDefaults standardUserDefaults] setObject:self.nameField.text forKey:@"Username"];
-    [[NSUserDefaults standardUserDefaults] setObject:[[NSUUID UUID] UUIDString] forKey:@"UUID"];
+
+  // UUID = username
+    //[[NSUserDefaults standardUserDefaults] setObject:[[NSUUID UUID] UUIDString] forKey:@"UUID"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.nameField.text forKey:@"UUID"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [self requestHealthKitPermission];
 }

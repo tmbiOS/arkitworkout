@@ -158,7 +158,7 @@
                                                 <label height="1" alignment="left" text="0.00" id="OLz-d2-nJL">
                                                     <fontDescription key="font" type="system" pointSize="22"/>
                                                 </label>
-                                                <label height="1" heightAdjustment="-6" alignment="left" verticalAlignment="bottom" text="MI" id="jZW-QQ-ZpQ">
+                                                <label height="1" heightAdjustment="-6" alignment="left" verticalAlignment="bottom" text="M" id="jZW-QQ-ZpQ">
                                                     <fontDescription key="font" type="system" pointSize="16"/>
                                                 </label>
                                             </items>

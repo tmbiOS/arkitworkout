@@ -165,7 +165,7 @@
         }
     };
     
-    dispatch_async(_messageQueue, ^{
+    /*dispatch_async(_messageQueue, ^{
         NSDictionary *body = [[NSDictionary alloc] initWithObjectsAndKeys: [NSString stringWithFormat:@"select * from `Fitness` where userid like \"%@\"", self.userId], @"filter", self.userId, @"subscription_id", [NSNumber numberWithInt:1], @"period", nil];
         rtm_status stat = [weakSelf.connMgr subscribeWithBody:body withMessageHandler:weakSelf.messageHandler];
         if (stat != RTM_OK) {
@@ -176,7 +176,7 @@
         while ([weakSelf.connMgr.rtm poll] >= 0) {
             sleep(1);
         }
-    });
+    });*/
 }
 
 - (void)closeButtonDidTap {
